@@ -1,0 +1,33 @@
+he gpt, ik ben een dog matcher app aan het maken met react. deze app vergelijkt de leefstijl van de gebruiker door leefstijl vragen te stellen met de verschillende hondenrassen en gaat dan als de app straks helemaal klaar is de juiste suggesties geven over welk hondenras bij de gebruikers leefstijl past. ik heb in totaal iets meer dan 170 hondenrassen in mijn app. ik maak gebruik van de dog api, maar om een goed vergelijkings systeem te bouwen geef ik elk hondenras zelf nog handmatig 8 aparte cijfers per hondenras, de cijfers hebben een schaal van 1 t/m 3. nu heb ik zelf al ongeveer 75 hondenrassen beoordeelt. maar dit is natuurlijk een nogal tijdrovend proces. nu is mijn idee, aangezien ik al bijna 75 rassen heb beoordeelt, wil ik nu jou die hondenrassen toe sturen die ik al beoordeelt heb, zodat jij kan hoe ik die heb beoordeelt. je gaat dan al snel zien dat veel honden in een soort hondentype vallen. dus terriers hebben vaak enigzins dezelfde cijfers als het gaat om petFriendlyness met andere huisdieren. grote sterke waakhonden hebben vaak enigszins dezelfde cijfers als het gaat om Experience needed en living space. voor de duidelijkheid, het is niet zo simpel dat elke grote hond direct een 3 krijgt( de zwaarste score) voor living space omdat hij groot is, er wordt ook rekening gehouden met hoe actief die hond is, en ook bijvoorbeeld wat zijn instinct is. dus een grote waakhond heeft genoeg living space nodig omdat hij groot is, maar ook omdat hij een waakinstinct heeft, en door het waakinstinct is een tuin dan ook gewenst. dus er zit veel nuance in de cijfers. ik heb trouwens al meerdere hard rules voor mijn systeem ingebouwd, die voorkomen dan hondenrassen worden gematched met huishoudens die totaal niet passen, of zelfs gevaarlijke situaties opleveren. zoals: als een gebruiker geen ervaring heeft met honden en hij heeft al andere huisdieren, dan vallen door de hard rules al veel honden af. mijn vergelijkings systeem wordt ongeveer zo: eerste de hard rules, die halen de red flags eruit, dan het vergelijkingssysteem die bepaald welke honden redelijk passen en welke echt goed passen, en dan als laatst wordt nog de preference van de gebruiker meegenomen. dus ik heb een gebruikers vraag over: Preferred dog size. dus als er dan meerdere hondenrassen goed uitkomen als suggestie na de hard rules en vergelijking van de cijfers, dan wordt het antwoord op de preference vraag nog mee genomen in de beoordeling. ik zal nog even iets meer uitleggen over de gebruikersvragen. ik heb de volgende meerkeuze vragen: Acitivity level van de gebruiker: low/medium/high. Living space: apartment/house/house+garden. Experience with dogs: beginner/intermidiate/advanced. Young children at home: yes/no. other pets at home: none/cats/dogs/other. Daily time available for a dog: less than 1 hour/1-2 hours/more than 2 hours. Preferred dog size: small/medium/large. deze antwoorden kan je vaak vertalen naar cijfers 1 t/m 3. niet voor allemaal. want sommige vragen zijn alleen ja of nee, en bij "other pets at home" vallen other pets en cats eigenlijk in 1 categorie, maar die heb ik gesplitst om de gebruiker een betere UX te geven zodat ze meer opties hebben om uit te kiezen. maar voor het vergelijkingssysteem maakt het niet uit of iemand een kat of een konijn heeft. dat cijfer wordt allebei hetzelfde meegenomen voor de petFriendlyness other pets. de vraag "daily time availeble for a dog" heeft ook meerdere aspecten. daarin wordt beoordeelt hoeveel training een hond nodig heeft, en ook hoeveel beweging/uitlaten/uitdaging. dus een border collie en een husky scoren hoog om de daily time available needs. terwijl een klein makkelijk, lui en lief hondje lager scoort op die schaal. niet omdat ze geen tijd nodig hebben, elke hond heeft aandacht en tijd nodig, maar ook probeer ik altijd rekening te houden met wat de gevolgen zijn als een bepaalde hond niet de juiste baas krijgt. dus heb je een husky die niet goed gesocialiceerd en getraind wordt, en te weinig uitdaging en uitlaten per dag krijgt dan krijg je absoluut een lastige onhandelbare husky. terwijl als je bijvoorbeeld een bichon frise niet de perfecte training en uitdaging geeft de gevolgen niet zo ernstig zijn. dus ik kijk naar wat de hond nodig heeft, maar ook naar de gevolgden als een hond niet de juiste omstandigheden heeft. bijvoorbeeld: een type terrier met jachtinstinct lijken soms best leuke/makkelijke honden qua uiterlijk. maar dat zijn verrassend lastige honden die als ze niet de juiste training/socialisatie krijgen. dus zo'n type jacht terrier scoort een 3 qua Experience needed. en scoort ook een 3 qua petFriendlyness met other animals(dus dat is voor cats en other pets). want als je een onervaren baasje hebt, met andere huisdieren, dan is een jachttype terrier natuurlijk geen optie. maar de hard rules waar ik het eerder over had voorkomen dat soort matches ook. maar dan begrijp je een beetje hoe ik de honden qua cijfers heb beoordeelt. mijn idee is nu: ik stuur jou zo die 75 hondenrassen die ik al gedaan heb. en dan ga ik jou telken 10 hondenrassen sturen die nog beoordeelt moeten worden, en die ga jij dan cijfers geven, daarbij hou je rekening met de hondenrassen die ik al beoordeelt heb, zodat het goed aansluit bij het systeem wat ik maak. ook houd je rekening met de kennis die jij hebt of kan vinden over een hondenras. dus het is niet puur kijken naar al beoordeelde honden, het is ook kijken naar wat het instinct van het hondenras is, wat er over bekend is/staat. we beginnen rustig met 10 hondenrassen die jij gaat doen, zodat ik een beetje kan controleren of ik het eens ben met de cijfers die jij hebt gegeven. nog een belangrijk punt, je moet de cijfers hetzelfde neerzetten qua syntax zoals ik heb gedaan, zodat ik de lijstjes makkelijk in mijn file kan kopieëren. wat je misschien gaat opvallen is dat er weinig honden zijn met een time-need van 1. dit komt omdat naar mijn idee de meeste honden wel meer dan 1 uur per dag aan werk zijn. maar dat zo weinig honden een 1 krijgen in dat opzicht is niet erg, ik heb er zelf al over nagedacht hoe ik dat slim ga implementeren in mijn vergelijkingssysteem wat ik later ga maken.
+
+working:
+
+- heeft echt een taak nodig
+- niet alleen graag samenwerken
+- zeldzaam instinct
+
+companionship:
+
+- moderne gezinshond
+- oorspronkelijk werk is niet meer bepalend
+
+scent:
+
+- geurspoor is kern van het ras
+
+hunting:
+
+- duidelijke prey drive
+- relevant voor hard rules
+
+herding:
+
+- herding gedrag is nog zichtbaar in de gemiddelde hond
+
+guarding:
+
+- beschermen van terrein/eigenaar is kern van het ras
+
+intense:
+
+- uitzonderlijk veeleisend of moeilijk ras
