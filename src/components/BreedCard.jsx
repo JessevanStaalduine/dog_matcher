@@ -32,6 +32,7 @@ function BreedCard({ breed, onClick }) {
           <img
             src={imageData.src}
             alt={breed.name}
+            loading="lazy"
             style={{ objectPosition: imageData.objectPosition }}
           />
         ) : (
