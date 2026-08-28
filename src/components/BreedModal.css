@@ -31,6 +31,7 @@
 
 .breed-modal__close {
   font-size: clamp(2rem, 3vw, 3.5rem);
+  color: #8b2a2a;
   border: none;
   background: none;
   cursor: pointer;
@@ -49,7 +50,7 @@
 }
 
 .modal-h2 {
-  font-size: clamp(16px, 2.75vh, 24px);
+  font-size: clamp(17px, 2.9vh, 24px);
 }
 
 /* Flex container voor image + weight/height */
@@ -198,6 +199,14 @@
 
   .breed-modal__close {
     line-height: 0.25;
+  }
+
+  .breed-modal__close:hover {
+  color: #661919;
+  }
+
+  .modal-h2 {
+  font-size: clamp(16px, 3.25vh, 30px);
   }
 
 }

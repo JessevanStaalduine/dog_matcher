@@ -25,7 +25,7 @@ export function applySizePreference(breeds, preferredSize) {
       ...breed,
       suggestionScore:
         breed.averageScore !== null && breed.averageScore !== undefined
-          ? Number((breed.averageScore - sizePenalty).toFixed(1))
+          ? Math.max(0, Number((breed.averageScore - sizePenalty).toFixed(1)))
           : null,
     };
   });
