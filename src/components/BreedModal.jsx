@@ -22,11 +22,14 @@ function BreedModal({ breed, onClose }) {
   return (
     <div className="breed-modal__overlay" onClick={onClose}>
       <div className="breed-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="breed-modal__close" onClick={onClose}>
-          ×
-        </button>
+        <div className="h2_button_container">
 
-        <h2 className="modal-h2">{breed.name}</h2>
+          <h2 className="modal-h2">{breed.name}</h2>
+
+          <button className="breed-modal__close" onClick={onClose}>
+            ×
+          </button>
+        </div>
 
 {/* Flex container voor image + weight/height */}
 <div className="breed-modal__content">
