@@ -426,6 +426,8 @@ input[type="checkbox"] {
   }
   
 .questions-container {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   width: clamp(400px, 30vw, 460px);
   max-width: none;
   margin: 0;
