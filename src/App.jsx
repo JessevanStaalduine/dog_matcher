@@ -25,6 +25,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const resultsRef = useRef(null);
+  const searchRef = useRef(null);
   const gridRef = useRef(null);
   const [columns, setColumns] = useState(1);
 
@@ -79,8 +80,8 @@ function App() {
   }, []);
 
     useEffect(() => {
-      if (resultsRef.current) {
-        resultsRef.current.scrollIntoView({
+      if (searchRef.current) {
+        searchRef.current.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
@@ -143,12 +144,6 @@ const filteredBreeds =
 
   return (
     <main>
-      {answers && (
-        <BreedSearch
-          breeds={breedsWithScores}
-          onSelectBreed={setSelectedBreed}
-        />
-      )}
 
       {/* BreedModal openen */}
       {selectedBreed && (
@@ -166,6 +161,14 @@ const filteredBreeds =
         <div className="questions-column">
           <Questions onSubmitAnswers={handleSubmitAnswers} />
         </div>
+
+              {answers && (
+                <BreedSearch
+                  breeds={breedsWithScores}
+                  onSelectBreed={setSelectedBreed}
+                  ref={searchRef}
+                />
+              )}
 
         {answers && (
           <div className="results-column">

@@ -1,7 +1,7 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, forwardRef } from "react";
 import { getBreedImageData } from "../utils/breedImages";
 
-function BreedSearch({ breeds, onSelectBreed }) {
+const BreedSearch = forwardRef(({ breeds, onSelectBreed }, ref) => {
   const [query, setQuery] = useState("");
 
   const normalizedQuery = query.toLowerCase().trim();
@@ -22,7 +22,7 @@ function BreedSearch({ breeds, onSelectBreed }) {
   };
 
   return (
-    <div className="breed-search">
+    <div className="breed-search" ref={ref}>
       <input
         type="text"
         placeholder="Search dog breeds..."
@@ -58,6 +58,6 @@ function BreedSearch({ breeds, onSelectBreed }) {
       )}
     </div>
   );
-}
+});
 
 export default BreedSearch;
