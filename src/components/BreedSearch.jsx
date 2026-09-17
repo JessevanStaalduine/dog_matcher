@@ -1,5 +1,9 @@
+
 import { useState, useMemo, forwardRef } from "react";
 import { getBreedImageData } from "../utils/breedImages";
+import { breedTraits } from "../utils/breedTraits";
+
+const showBreedsWithoutTraits = false;
 
 const BreedSearch = forwardRef(({ breeds, onSelectBreed }, ref) => {
   const [query, setQuery] = useState("");
@@ -7,13 +11,21 @@ const BreedSearch = forwardRef(({ breeds, onSelectBreed }, ref) => {
   const normalizedQuery = query.toLowerCase().trim();
 
   const suggestions = useMemo(() => {
-    return normalizedQuery.length > 0
-      ? breeds
-          .filter((breed) =>
-            breed.name.toLowerCase().startsWith(normalizedQuery)
-          )
-          .slice(0, 120)
-      : [];
+    if (normalizedQuery.length === 0) {
+      return [];
+    }
+
+    return breeds
+      .filter((breed) => {
+        if (!showBreedsWithoutTraits && !breedTraits[breed.name]) {
+          return false;
+        }
+
+        return breed.name
+          .toLowerCase()
+          .startsWith(normalizedQuery);
+      })
+      .slice(0, 120);
   }, [normalizedQuery, breeds]);
 
   const handleSelect = (breed) => {
