@@ -1,9 +1,21 @@
 
 import { useEffect, useState } from "react";
-import pawGif from "../assets/gif/paws2.gif";
+
+const pawFrames = Object.entries(
+  import.meta.glob("../assets/gif/paws2/*.png", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  })
+)
+  .sort(([a], [b]) =>
+    a.localeCompare(b, undefined, { numeric: true })
+  )
+  .map(([, url]) => url);
 
 function PawAnimations() {
   const [paw, setPaw] = useState(null);
+  const [frameIndex, setFrameIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
@@ -11,26 +23,30 @@ function PawAnimations() {
     const animationDuration = 5820;
     const fadeDuration = 1500;
 
+    const frameDuration =
+      animationDuration / (pawFrames.length - 1);
+
     let fadeTimer;
     let hideTimer;
     let nextTimer;
+    let frameTimer;
 
     const getRandomPosition = () => {
-    const maxX = Math.max(0, window.innerWidth - pawSize);
+      const maxX = Math.max(0, window.innerWidth - pawSize);
 
-    const bottomAreaStart = window.innerHeight * 0.55;
-    const bottomAreaHeight = window.innerHeight * 0.45;
+      const bottomAreaStart = window.innerHeight * 0.55;
+      const bottomAreaHeight = window.innerHeight * 0.45;
 
-    const maxY = Math.max(
+      const maxY = Math.max(
         0,
         bottomAreaHeight - pawSize
-    );
+      );
 
-    return {
+      return {
         x: Math.random() * maxX,
         y: bottomAreaStart + Math.random() * maxY,
         rotation: Math.random() * 360,
-    };
+      };
     };
 
     const showPaw = () => {
@@ -38,19 +54,39 @@ function PawAnimations() {
 
       setIsFading(false);
 
+      // Iedere nieuwe paw begint bij frame 1.
+      setFrameIndex(0);
+
       setPaw({
         id: `${Date.now()}-${Math.random()}`,
         ...position,
       });
 
+      // Frames afspelen.
+      frameTimer = setInterval(() => {
+        setFrameIndex((currentFrame) => {
+          if (currentFrame < pawFrames.length - 1) {
+            return currentFrame + 1;
+          }
+
+          return currentFrame;
+        });
+      }, frameDuration);
+
+      // Fade starten.
       fadeTimer = setTimeout(() => {
         setIsFading(true);
       }, animationDuration - fadeDuration);
 
+      // Paw verwijderen.
       hideTimer = setTimeout(() => {
+        clearInterval(frameTimer);
+
         setPaw(null);
         setIsFading(false);
+        setFrameIndex(0);
 
+        // Bestaande delay van 2-4 seconden behouden.
         const delay = Math.random() * 2000 + 2000;
 
         nextTimer = setTimeout(() => {
@@ -59,6 +95,7 @@ function PawAnimations() {
       }, animationDuration);
     };
 
+    // Bestaande initial delay van 3-5 seconden behouden.
     const initialDelay = Math.random() * 2000 + 3000;
 
     nextTimer = setTimeout(() => {
@@ -69,6 +106,7 @@ function PawAnimations() {
       clearTimeout(fadeTimer);
       clearTimeout(hideTimer);
       clearTimeout(nextTimer);
+      clearInterval(frameTimer);
     };
   }, []);
 
@@ -85,13 +123,9 @@ function PawAnimations() {
         transform: `rotate(${paw.rotation}deg)`,
       }}
     >
-      <img src={pawGif} alt="" />
+      <img src={pawFrames[frameIndex]} alt="" />
     </div>
   );
 }
 
 export default PawAnimations;
-
-
-
-
