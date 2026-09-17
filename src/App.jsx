@@ -3,6 +3,8 @@ import Questions from "./components/questions.jsx";
 import BreedCard from "./components/BreedCard";
 import BreedSearch from "./components/BreedSearch";
 import BreedModal from "./components/BreedModal.jsx";
+import PawAnimations from "./components/PawAnimations.jsx";
+import PawAnimations2 from "./components/PawAnimations2.jsx";
 import { matchBreeds } from "./utils/matchBreeds";
 import { scoreBreeds } from "./utils/scoreBreeds";
 import { applySizePreference } from "./utils/applySizePreference";
@@ -155,6 +157,9 @@ const filteredBreeds =
           onClose={() => setSelectedBreed(null)}
         />
       )}
+
+      <PawAnimations />
+      <PawAnimations2 />
 
       <div className="app-content">
 
