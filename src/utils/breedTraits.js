@@ -1621,6 +1621,19 @@ export const breedTraits = {
     size: 3,
   },
 
+  "Ca de Bou": {
+    energy: 2,
+    space: 2,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 3,
+      other: 3,
+    },
+    timeNeed: 2,
+    size: 2,
+  },
+
   "Cairn Terrier": {
     energy: 3,
     space: 1,
@@ -1628,10 +1641,101 @@ export const breedTraits = {
     kidFriendly: 2,
     petFriendly: {
       dogs: 2,
-      other: 2,
+      other: 3,
     },
     timeNeed: 2,
     size: 1,
+  },
+
+  Calupoh: {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Ca Mè Mallorquí": {
+    energy: 2,
+    space: 2,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 2,
+    size: 2,
+  },
+
+  "Campeiro Bulldog": {
+    energy: 2,
+    space: 2,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 2,
+    size: 2,
+  },
+
+  "Canaan Dog": {
+    energy: 3,
+    space: 2,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Canadian Eskimo Dog": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Can de Chira": {
+    energy: 2,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 2,
+  },
+
+  "Can de Palleiro": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 3,
   },
 
   "Cane Corso": {
@@ -1647,6 +1751,71 @@ export const breedTraits = {
     size: 3,
   },
 
+  "Cane di Oropa": {
+    energy: 2,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 2,
+  },
+
+  "Cane Paratore": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Cantabrian Water Dog": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Cão de Gado Transmontano": {
+    energy: 2,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Ca Rater Mallorquí": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 1,
+  },
+
   "Cardigan Welsh Corgi": {
     energy: 2,
     space: 1,
@@ -1658,6 +1827,58 @@ export const breedTraits = {
     },
     timeNeed: 2,
     size: 1,
+  },
+
+  "Carea Leonés": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Carolina Dog": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Carpathian Shepherd Dog": {
+    energy: 2,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Castro Laboreiro Dog": {
+    energy: 2,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
   },
 
   "Catahoula Leopard Dog": {
@@ -1673,11 +1894,24 @@ export const breedTraits = {
     size: 3,
   },
 
+  "Catalan Sheepdog": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
   "Caucasian Shepherd Dog": {
     energy: 2,
     space: 3,
     experience: 3,
-    kidFriendly: 2,
+    kidFriendly: 3,
     petFriendly: {
       dogs: 3,
       other: 3,
@@ -1699,24 +1933,154 @@ export const breedTraits = {
     size: 1,
   },
 
-  "Chesapeake Bay Retriever": {
+  Cavapom: {
+    energy: 1,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 1,
+    size: 1,
+  },
+
+  Cavapoo: {
     energy: 2,
-    space: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "Central Asian Shepherd Dog": {
+    energy: 2,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 3,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Cesky Terrier": {
+    energy: 2,
+    space: 1,
     experience: 2,
     kidFriendly: 2,
     petFriendly: {
       dogs: 2,
-      other: 2,
+      other: 3,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "Chart Polski": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
     },
     timeNeed: 3,
     size: 3,
+  },
+
+  "Chesapeake Bay Retriever": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Chien Français Blanc et Noir": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Chien Français Blanc et Orange": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Chien Français Tricolore": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  Chihuahua: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "Chilean Terrier": {
+    energy: 3,
+    space: 1,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 2,
+    size: 1,
   },
 
   "Chinese Crested": {
     energy: 2,
     space: 1,
     experience: 1,
-    kidFriendly: 2,
+    kidFriendly: 1,
     petFriendly: {
       dogs: 1,
       other: 1,
@@ -1751,6 +2115,84 @@ export const breedTraits = {
     size: 2,
   },
 
+  Chipoo: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  Chippiparai: {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  Chiweenie: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "Chongqing Dog": {
+    energy: 3,
+    space: 2,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  Chorkie: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  Chortai: {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
   "Chow Chow": {
     energy: 2,
     space: 2,
@@ -1761,6 +2203,58 @@ export const breedTraits = {
       other: 3,
     },
     timeNeed: 2,
+    size: 2,
+  },
+
+  Chug: {
+    energy: 1,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 1,
+    size: 1,
+  },
+
+  "Chukotka Sled Dog": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Cimarrón Uruguayo": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Cirneco dell'Etna": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
     size: 2,
   },
 
@@ -1777,6 +2271,19 @@ export const breedTraits = {
     size: 2,
   },
 
+  Cockapoo: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
   "Cocker Spaniel": {
     energy: 2,
     space: 1,
@@ -1790,6 +2297,58 @@ export const breedTraits = {
     size: 1,
   },
 
+  "Colombian Fino Hound": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Continental Bulldog": {
+    energy: 2,
+    space: 2,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 2,
+  },
+
+  Corgipoo: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "Corsican Dog": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
   "Coton de Tulear": {
     energy: 1,
     space: 1,
@@ -1801,6 +2360,58 @@ export const breedTraits = {
     },
     timeNeed: 2,
     size: 1,
+  },
+
+  "Cretan Hound": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Croatian Sheepdog": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Curly-Coated Retriever": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Czechoslovakian Wolfdog": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
   },
 
   Dalmatian: {
