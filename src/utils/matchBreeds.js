@@ -28,7 +28,7 @@ export function matchBreeds(breeds, answers) {
     // HARD RULE: Other pets vs hunting breeds
     // ---------------------------
     if ((otherPets.cats || otherPets.other) && breed.instincts) {
-      const huntingKeywords = ["hunting", "ratting"];
+      const huntingKeywords = ["hunting", "ratting", "chasing"];
 
       const isHuntingBreed = breed.instincts.some((instinct) =>
         huntingKeywords.includes(instinct),

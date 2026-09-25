@@ -294,7 +294,7 @@ export const breedInstincts = {
   Weimaraner: ["hunting", "scent", "working"],
   "Welsh Springer Spaniel": ["hunting", "scent", "working"],
   "West Highland White Terrier": ["ratting", "guarding"],
-  Whippet: ["hunting", "scent"],
+  Whippet: ["chasing"],
   "White Shepherd": ["guarding", "working"],
   "Wire Fox Terrier": ["ratting", "companionship"],
   "Wirehaired Pointing Griffon": ["hunting", "scent"],

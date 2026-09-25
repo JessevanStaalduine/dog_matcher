@@ -24,7 +24,7 @@ export const breedTraits = {
 
   "Afghan Hound": {
     energy: 2,
-    space: 2,
+    space: 3,
     experience: 3,
     kidFriendly: 2,
     petFriendly: {
@@ -634,15 +634,15 @@ export const breedTraits = {
   },
 
   "Banjara Hound": {
-    energy: 3,
+    energy: 2,
     space: 3,
-    experience: 3,
+    experience: 2,
     kidFriendly: 2,
     petFriendly: {
       dogs: 2,
       other: 3,
     },
-    timeNeed: 3,
+    timeNeed: 2,
     size: 2,
   },
 
@@ -1208,7 +1208,7 @@ export const breedTraits = {
   Borzoi: {
     energy: 2,
     space: 3,
-    experience: 3,
+    experience: 2,
     kidFriendly: 2,
     petFriendly: {
       dogs: 2,
@@ -2181,7 +2181,7 @@ export const breedTraits = {
   },
 
   Chortai: {
-    energy: 3,
+    energy: 2,
     space: 3,
     experience: 2,
     kidFriendly: 2,
@@ -2189,7 +2189,7 @@ export const breedTraits = {
       dogs: 2,
       other: 3,
     },
-    timeNeed: 3,
+    timeNeed: 2,
     size: 3,
   },
 

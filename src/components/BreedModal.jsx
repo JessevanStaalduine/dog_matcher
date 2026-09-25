@@ -39,7 +39,9 @@ function BreedModal({ breed, onClose }) {
       <img
         src={imageData.src}
         alt={breed.name}
-        style={{ objectPosition: imageData.objectPosition }}
+        style={{
+        objectPosition: imageData.objectPosition,
+      }}
       />
     </div>
   ) : (

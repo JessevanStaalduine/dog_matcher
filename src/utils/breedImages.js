@@ -21,6 +21,7 @@ const OBJECT_POSITION_OVERRIDES = {
   "Bulgarian Hound": "50% 48%",
   "Bull Arab": "50% 48%",
   Bulloxer: "50% 30%",
+  "Ca Mè Mallorquí": "50% 30%",
 };
 
 export function getBreedImageData(breedName) {

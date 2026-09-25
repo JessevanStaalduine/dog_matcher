@@ -81,14 +81,18 @@ function App() {
       });
   }, []);
 
-    useEffect(() => {
-      if (searchRef.current) {
-        searchRef.current.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    }, [currentPage, answers]);
+  useEffect(() => {
+    const targetRef = window.innerWidth >= 768
+      ? resultsRef
+      : searchRef;
+
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [currentPage, answers]);
 
     const updateColumns = () => {
       if (!gridRef.current) return;
