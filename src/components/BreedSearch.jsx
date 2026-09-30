@@ -3,7 +3,7 @@ import { useState, useMemo, forwardRef } from "react";
 import { getBreedImageData } from "../utils/breedImages";
 import { breedTraits } from "../utils/breedTraits";
 
-const showBreedsWithoutTraits = true;
+const showBreedsWithoutTraits = false;
 
 const BreedSearch = forwardRef(({ breeds, onSelectBreed }, ref) => {
   const [query, setQuery] = useState("");
