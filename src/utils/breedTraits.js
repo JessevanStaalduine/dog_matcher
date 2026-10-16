@@ -2414,6 +2414,32 @@ export const breedTraits = {
     size: 3,
   },
 
+  Dachshund: {
+    energy: 2,
+    space: 1,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  Dalmadoodle: {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
   Dalmatian: {
     energy: 3,
     space: 2,
@@ -2422,6 +2448,84 @@ export const breedTraits = {
     petFriendly: {
       dogs: 2,
       other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Dandie Dinmont Terrier": {
+    energy: 2,
+    space: 1,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "Danish Spitz": {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "Danish-Swedish Farmdog": {
+    energy: 3,
+    space: 2,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 1,
+  },
+
+  "Denmark Feist": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 1,
+  },
+
+  /*Dikkulak: {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 1,
+  },*/
+
+  Dingo: {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 3,
+    petFriendly: {
+      dogs: 3,
+      other: 3,
     },
     timeNeed: 3,
     size: 2,
@@ -2453,6 +2557,123 @@ export const breedTraits = {
     size: 3,
   },
 
+  "Dogo Sardesco": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 3,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Dogue Brasileiro": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 3,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Dogue de Bordeaux": {
+    energy: 2,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 2,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 3,
+  },
+
+  Donggyeongi: {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  Dorkie: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  Doxiepoo: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "Drentse Patrijshond": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  Drever: {
+    energy: 2,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  Dunker: {
+    energy: 2,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
   "Dutch Shepherd": {
     energy: 3,
     space: 3,
@@ -2464,6 +2685,19 @@ export const breedTraits = {
     },
     timeNeed: 3,
     size: 2,
+  },
+
+  "Dutch Smoushond": {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 1,
   },
 
   "English Setter": {

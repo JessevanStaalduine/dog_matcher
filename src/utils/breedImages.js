@@ -22,6 +22,8 @@ const OBJECT_POSITION_OVERRIDES = {
   "Bull Arab": "50% 48%",
   Bulloxer: "50% 30%",
   "Ca Mè Mallorquí": "50% 30%",
+  Dalmadoodle: "50% 40%",
+  "Dandie Dinmont Terrier": "50% 35%",
 };
 
 export function getBreedImageData(breedName) {
