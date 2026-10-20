@@ -14,7 +14,7 @@ const OBJECT_POSITION_OVERRIDES = {
   Armant: "50% 20%",
   "Armenian Gampr": "50% 50%",
   "Bakharwal Dog": "50% 20%",
-  "Barak Hound": "50% 20%",
+  "Barak Hound": "50% 15%",
   Bassettoodle: "50% 40%",
   "Bergamasco Sheepdog": "50% 30%",
   Bugg: "50% 40%",
@@ -24,6 +24,8 @@ const OBJECT_POSITION_OVERRIDES = {
   "Ca Mè Mallorquí": "50% 30%",
   Dalmadoodle: "50% 40%",
   "Dandie Dinmont Terrier": "50% 35%",
+  "Can de Palleiro": "50% 40%",
+  Kuvasz: "50% 30%",
 };
 
 export function getBreedImageData(breedName) {
