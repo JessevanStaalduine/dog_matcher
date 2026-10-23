@@ -429,7 +429,7 @@ input[type="checkbox"] {
 
 /* Oude pagina: geleidelijk vervagen */
 .breed-grid-page.grid-page-exit {
-  animation: gridPageExit 750ms ease-in-out 150ms forwards;
+  animation: gridPageExit 650ms ease-in-out 100ms forwards;
 }
 
 
@@ -444,14 +444,12 @@ input[type="checkbox"] {
 
 /* Volgende pagina: schuif naar links */
 .breed-grid-track.slide-next {
-  animation: slideNext 1.5s ease-in-out forwards;
-  animation-delay: 150ms;
+  animation: slideNext 750ms ease-in-out forwards;
 }
 
 /* Vorige pagina: schuif naar rechts */
 .breed-grid-track.slide-previous {
-  animation: slidePrevious 1.5s ease-in-out forwards;
-  animation-delay: 150ms;
+  animation: slidePrevious 750ms ease-in-out forwards;
 }
 
 @keyframes slideNext {
