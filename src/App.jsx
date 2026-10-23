@@ -109,8 +109,12 @@ function App() {
         });*/
 
         const normalized = normalizeBreeds(data);
-       
-          const instinctsSkeleton = normalized
+
+        const uniqueBreeds = Array.from(
+          new Map(normalized.map((breed) => [breed.name, breed])).values()
+        );
+              
+          const instinctsSkeleton = uniqueBreeds
     .map((b) => b.name)
     .sort((a, b) => a.localeCompare(b))
     .reduce((acc, name) => {
@@ -121,7 +125,7 @@ function App() {
   //console.log("=== breedInstincts skeleton ===");
   console.log(instinctsSkeleton);
 
-        setBreeds(normalized);
+        setBreeds(uniqueBreeds);
       });
   }, []);
 
