@@ -309,9 +309,8 @@ const filteredBreeds =
                   <div className="breed-pagination">
                     <button className="button pagination_button"
                       onClick={() => {
-                        setPreviousBreeds(currentBreeds);
-
                         scrollToTargetAndThen(() => {
+                          setPreviousBreeds(currentBreeds);
                           setSlideDirection("previous");
                           setCurrentPage(currentPage - 1);
                         });
@@ -327,9 +326,8 @@ const filteredBreeds =
 
                     <button className="button pagination_button"
                       onClick={() => {
-                        setPreviousBreeds(currentBreeds);
-
                         scrollToTargetAndThen(() => {
+                          setPreviousBreeds(currentBreeds);
                           setSlideDirection("next");
                           setCurrentPage(currentPage + 1);
                         });

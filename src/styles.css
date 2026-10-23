@@ -475,7 +475,7 @@ input[type="checkbox"] {
 @media (prefers-reduced-motion: reduce) {
   .breed-grid-track.slide-next,
   .breed-grid-track.slide-previous {
-    animation-duration: 1s;
+    animation-duration: 750ms;
   }
 }
  
