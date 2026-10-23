@@ -429,7 +429,7 @@ input[type="checkbox"] {
 
 /* Oude pagina: geleidelijk vervagen */
 .breed-grid-page.grid-page-exit {
-  animation: gridPageExit 700ms ease-in-out 100ms forwards;
+  animation: gridPageExit 850ms ease-in-out 150ms forwards;
 }
 
 
@@ -444,12 +444,12 @@ input[type="checkbox"] {
 
 /* Volgende pagina: schuif naar links */
 .breed-grid-track.slide-next {
-  animation: slideNext 750ms ease-in-out forwards;
+  animation: slideNext 900ms ease-in-out forwards;
 }
 
 /* Vorige pagina: schuif naar rechts */
 .breed-grid-track.slide-previous {
-  animation: slidePrevious 750ms ease-in-out forwards;
+  animation: slidePrevious 900ms ease-in-out forwards;
 }
 
 @keyframes slideNext {
@@ -475,7 +475,7 @@ input[type="checkbox"] {
 @media (prefers-reduced-motion: reduce) {
   .breed-grid-track.slide-next,
   .breed-grid-track.slide-previous {
-    animation-duration: 750ms;
+    animation-duration: 900ms;
   }
 }
  
