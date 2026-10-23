@@ -407,12 +407,85 @@ input[type="checkbox"] {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
+/* Container waarbinnen de pagina's schuiven */
+.breed-grid-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Bevat beide pagina's naast elkaar */
+.breed-grid-track {
+  display: flex;
+  width: 200%;
+}
+
+/* Iedere pagina neemt precies de helft van de track in */
+.breed-grid-page {
+  flex: 0 0 50%;
+  min-width: 0;
+  opacity: 1;
+}
+
+/* Oude pagina: geleidelijk vervagen */
+.breed-grid-page.grid-page-exit {
+  animation: gridPageExit 750ms ease-in-out 150ms forwards;
+}
+
+
+@keyframes gridPageExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Volgende pagina: schuif naar links */
+.breed-grid-track.slide-next {
+  animation: slideNext 1.5s ease-in-out forwards;
+  animation-delay: 150ms;
+}
+
+/* Vorige pagina: schuif naar rechts */
+.breed-grid-track.slide-previous {
+  animation: slidePrevious 1.5s ease-in-out forwards;
+  animation-delay: 150ms;
+}
+
+@keyframes slideNext {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slidePrevious {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breed-grid-track.slide-next,
+  .breed-grid-track.slide-previous {
+    animation-duration: 1s;
+  }
+}
  
 @media (min-width: 768px) {
 
   .app-content {
     display: grid;
-    grid-template-columns: clamp(400px, 30vw, 460px) 1fr;
+    grid-template-columns: clamp(400px, 30vw, 460px) minmax(0, 1fr);
     gap: 1rem;
     align-items: start;
   }

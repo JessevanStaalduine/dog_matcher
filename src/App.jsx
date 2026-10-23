@@ -25,6 +25,8 @@ function App() {
   const [breedsWithScores, setBreedsWithScores] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [slideDirection, setSlideDirection] = useState(null);
+  const [previousBreeds, setPreviousBreeds] = useState(null);
 
   const resultsRef = useRef(null);
   const searchRef = useRef(null);
@@ -39,9 +41,6 @@ function App() {
   const currentBreeds = breedsToShow.slice(startIndex, endIndex);
 
   const totalPages = Math.ceil(breedsToShow.length / cardsPerPage);
-
-  
-
   
 
   useEffect(() => {
@@ -192,19 +191,83 @@ const filteredBreeds =
                   </>
                 )}
 
-              <div className="breed-grid" ref={gridRef}>
-                {currentBreeds.map((breed) => (
-                  <BreedCard
-                    key={breed.id}
-                    breed={breed}
-                    onClick={setSelectedBreed}
-                  />
-                ))}
-              </div>
+                <div className="breed-grid-viewport">
+                  <div
+                    className={`breed-grid-track ${
+                      slideDirection ? `slide-${slideDirection}` : ""
+                    }`}
+                    onAnimationEnd={(event) => {
+                      if (event.target !== event.currentTarget) return;
+
+                      setPreviousBreeds(null);
+                      setSlideDirection(null);
+                    }}
+                  >
+                    {slideDirection === "previous" ? (
+                      <>
+                        <div className="breed-grid-page grid-page-enter">
+                          <div className="breed-grid" ref={gridRef}>
+                            {currentBreeds.map((breed) => (
+                              <BreedCard
+                                key={breed.id}
+                                breed={breed}
+                                onClick={setSelectedBreed}
+                              />
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="breed-grid-page grid-page-exit">
+                          <div className="breed-grid">
+                            {previousBreeds?.map((breed) => (
+                              <BreedCard
+                                key={breed.id}
+                                breed={breed}
+                                onClick={setSelectedBreed}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        {previousBreeds && (
+                          <div className="breed-grid-page grid-page-exit">
+                            <div className="breed-grid">
+                              {previousBreeds.map((breed) => (
+                                <BreedCard
+                                  key={breed.id}
+                                  breed={breed}
+                                  onClick={setSelectedBreed}
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        <div className="breed-grid-page grid-page-enter">
+                          <div className="breed-grid" ref={gridRef}>
+                            {currentBreeds.map((breed) => (
+                              <BreedCard
+                                key={breed.id}
+                                breed={breed}
+                                onClick={setSelectedBreed}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
 
                   <div className="breed-pagination">
                     <button className="button pagination_button"
-                      onClick={() => setCurrentPage(currentPage - 1)}
+                      onClick={() => {
+                        setPreviousBreeds(currentBreeds);
+                        setSlideDirection("previous");
+                        setCurrentPage(currentPage - 1);
+                      }}
                       disabled={currentPage === 1}
                     >
                       ← Previous
@@ -215,7 +278,11 @@ const filteredBreeds =
                     </span>
 
                     <button className="button pagination_button"
-                      onClick={() => setCurrentPage(currentPage + 1)}
+                      onClick={() => {
+                        setPreviousBreeds(currentBreeds);
+                        setSlideDirection("next");
+                        setCurrentPage(currentPage + 1);
+                      }}
                       disabled={currentPage === totalPages}
                     >
                       Next →
