@@ -41,6 +41,51 @@ function App() {
   const currentBreeds = breedsToShow.slice(startIndex, endIndex);
 
   const totalPages = Math.ceil(breedsToShow.length / cardsPerPage);
+
+    const scrollToTargetAndThen = (callback) => {
+    const targetRef = window.innerWidth >= 768
+      ? resultsRef
+      : searchRef;
+
+    if (!targetRef.current) {
+      callback();
+      return;
+    }
+
+    const target = targetRef.current;
+
+    // Als de target al bovenaan staat, hoeven we niet te wachten.
+    if (Math.abs(target.getBoundingClientRect().top) < 2) {
+      callback();
+      return;
+    }
+
+    let finished = false;
+    let fallbackTimer;
+
+    const finishScroll = () => {
+      if (finished) return;
+
+      finished = true;
+
+      document.removeEventListener("scrollend", finishScroll);
+      window.removeEventListener("scrollend", finishScroll);
+      clearTimeout(fallbackTimer);
+
+      callback();
+    };
+
+    document.addEventListener("scrollend", finishScroll);
+    window.addEventListener("scrollend", finishScroll);
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    // Noodoplossing voor browsers die scrollend niet afvuren.
+    fallbackTimer = window.setTimeout(finishScroll, 2000);
+  };
   
 
   useEffect(() => {
@@ -91,7 +136,7 @@ function App() {
         block: "start",
       });
     }
-  }, [currentPage, answers]);
+  }, [answers]);
 
     const updateColumns = () => {
       if (!gridRef.current) return;
@@ -265,8 +310,11 @@ const filteredBreeds =
                     <button className="button pagination_button"
                       onClick={() => {
                         setPreviousBreeds(currentBreeds);
-                        setSlideDirection("previous");
-                        setCurrentPage(currentPage - 1);
+
+                        scrollToTargetAndThen(() => {
+                          setSlideDirection("previous");
+                          setCurrentPage(currentPage - 1);
+                        });
                       }}
                       disabled={currentPage === 1}
                     >
@@ -280,8 +328,11 @@ const filteredBreeds =
                     <button className="button pagination_button"
                       onClick={() => {
                         setPreviousBreeds(currentBreeds);
-                        setSlideDirection("next");
-                        setCurrentPage(currentPage + 1);
+
+                        scrollToTargetAndThen(() => {
+                          setSlideDirection("next");
+                          setCurrentPage(currentPage + 1);
+                        });
                       }}
                       disabled={currentPage === totalPages}
                     >
