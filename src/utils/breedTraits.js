@@ -2700,6 +2700,84 @@ export const breedTraits = {
     size: 1,
   },
 
+  "East European Shepherd": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "East Siberian Laika": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Ecuadorian Hairless Dog": {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "English Cocker Spaniel": {
+    energy: 3,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "English Foxhound": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "English Mastiff": {
+    energy: 2,
+    space: 3,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 2,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 3,
+  },
+
   "English Setter": {
     energy: 3,
     space: 2,
@@ -2750,6 +2828,71 @@ export const breedTraits = {
     },
     timeNeed: 2,
     size: 1,
+  },
+
+  "Entlebucher Mountain Dog": {
+    energy: 3,
+    space: 3,
+    experience: 2,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  /*"Erbi Txakur": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },*/
+
+  Eskapoo: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  "Estonian Hound": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  "Estrela Mountain Dog": {
+    energy: 2,
+    space: 3,
+    experience: 3,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 2,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 3,
   },
 
   Eurasier: {
