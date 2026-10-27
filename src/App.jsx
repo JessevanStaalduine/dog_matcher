@@ -162,6 +162,38 @@ function App() {
     };
   }, [answers]);
 
+const shuffleEqualScores = (breeds) => {
+  const result = [];
+
+  let i = 0;
+
+  while (i < breeds.length) {
+    const score = breeds[i].suggestionScore;
+
+    let j = i + 1;
+
+    while (
+      j < breeds.length &&
+      breeds[j].suggestionScore === score
+    ) {
+      j++;
+    }
+
+    const group = breeds.slice(i, j);
+
+    for (let k = group.length - 1; k > 0; k--) {
+      const randomIndex = Math.floor(Math.random() * (k + 1));
+      [group[k], group[randomIndex]] = [group[randomIndex], group[k]];
+    }
+
+    result.push(...group);
+
+    i = j;
+  }
+
+  return result;
+};
+
 
 const handleSubmitAnswers = (submittedAnswers) => {
   setCurrentPage(1);
@@ -188,7 +220,9 @@ const sorted = [...sizeAdjusted].sort(
   (a, b) => b.suggestionScore - a.suggestionScore
 );
 
-setBreedsToShow(sorted);
+const randomized = shuffleEqualScores(sorted);
+
+setBreedsToShow(randomized);
 };
 
 const filteredBreeds =
