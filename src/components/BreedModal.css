@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
+  width: 96%;
   margin: 0 auto;
 }
 
@@ -51,6 +51,13 @@
 
 .modal-h2 {
   font-size: clamp(17px, 2.9vh, 24px);
+
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: #212924;
+
+  text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.2);
 }
 
 /* Flex container voor image + weight/height */
@@ -80,6 +87,7 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 5%;
+  border: 0.5px solid rgb(100, 100, 100);
   border-radius: 12px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
 }
@@ -172,10 +180,10 @@
   line-height: 1.4;
 }
 
-@media (min-width: 692px) { 
+@media (min-width: 620px) { 
         .breed-modal__content {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .breed-modal__image {

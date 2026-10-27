@@ -9,7 +9,7 @@ ul {
 }
 
 body {
-  background-color: #F3F1EC;
+  background-color: #e4e2de;
   font-family: "Inter", sans-serif;
 }
 
@@ -67,7 +67,7 @@ button {
 .button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
-  border-color: #aaa;
+  border-color: #5f5f5f;
 }
 
 .button:active {
@@ -82,6 +82,9 @@ button {
 
 /* Container van de vragenlijst */
 .questions-container {
+  position: relative;
+  overflow: hidden;
+
   max-width: 400px;       /* past op de meeste telefoons */
   margin: 10px auto;      /* centreert de container horizontaal */
   padding: 10px;
@@ -89,8 +92,28 @@ button {
   flex-direction: column;
   gap: clamp(6px, 0.85vw, 20px);
   background-color: #f9f9f9;
+  background-image: url("./assets/PNG/BG-leaf.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  
+
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.questions-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(249, 249, 249, 0.35);
+
+  pointer-events: none;
+}
+
+.questions-container > * {
+  position: relative;
+  z-index: 1;
 }
 
 .questions-container form {
@@ -103,8 +126,8 @@ button {
 .questions-container label {
   display: flex;
   flex-direction: column;
-  font-weight: 500;
-  font-size: 0.98rem;
+  font-weight: 600;
+  font-size: 1.15rem;
 }
 
 .questions-container select {
@@ -114,8 +137,9 @@ button {
   padding: 2px;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 600;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #474747;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
@@ -135,7 +159,7 @@ input[type="checkbox"] {
 
 .preferences_h3 {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.01em;
   margin: 0 auto;
   margin-top: 0.75rem;
@@ -151,8 +175,8 @@ input[type="checkbox"] {
 }
 
 .questions_p {
-  font-weight: 500;
-  font-size: 0.98rem;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .checkbox-question {
@@ -171,11 +195,14 @@ input[type="checkbox"] {
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
 }
 
 .submit_button {
+  background: #668f72;
+  color: white;
+  border-color: #587c63;
   padding: 0.5rem 1.2rem;
 }
 
@@ -206,6 +233,13 @@ input[type="checkbox"] {
 .breed-name {
   font-size: clamp(1.25rem, 2.5vh, 1.5rem);
   margin-left: 0.3rem;
+
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #212924;
+
+  text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.2);
 }
 
 .match-score-card {
@@ -267,6 +301,7 @@ input[type="checkbox"] {
   height: 100%;
   object-fit: cover;
   object-position: 50% 5%;
+  border: 1px solid rgb(130, 130, 130);
   border-radius: 8px;
   box-shadow: 0 1.5px 6px rgba(0, 0, 0, 0.8);
 }
@@ -294,7 +329,8 @@ input[type="checkbox"] {
   width: calc(100% - 32px);
   max-width: 420px;
   z-index: 1000; /* boven alles */
-  background: rgb(99, 99, 99);
+  background: #668f72;
+  border: 2px solid rgb(117, 117, 117);
   border-radius: 4px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -400,6 +436,9 @@ input[type="checkbox"] {
 }
 
 .pagination_button {
+  background: #668f72;
+  color: white;
+  border-color: #587c63;
   padding: 0.5rem 1rem;
 }
 
@@ -479,7 +518,7 @@ input[type="checkbox"] {
   }
 }
  
-@media (min-width: 768px) {
+@media (min-width: 742px) {
 
   .app-content {
     display: grid;
@@ -537,7 +576,7 @@ input[type="checkbox"] {
 }
 
   .questions-container label {
-    font-size: clamp(1rem, 1.25vw, 1.2rem);
+    font-size: clamp(1.1rem, 1.25vw, 1.2rem);
   }
 
   .questions-container p {
@@ -545,7 +584,7 @@ input[type="checkbox"] {
   }
 
   .checkbox-group label {
-    font-size: clamp(0.85rem, 1.2vw, 1.08rem);
+    font-size: clamp(0.95rem, 1.15vw, 1.1rem);
   }
 
   .checkbox-question {
