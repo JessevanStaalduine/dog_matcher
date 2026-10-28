@@ -26,6 +26,7 @@ const OBJECT_POSITION_OVERRIDES = {
   "Dandie Dinmont Terrier": "50% 35%",
   "Can de Palleiro": "50% 40%",
   Kuvasz: "50% 30%",
+  Frug: "50% 35%",
 };
 
 export function getBreedImageData(breedName) {

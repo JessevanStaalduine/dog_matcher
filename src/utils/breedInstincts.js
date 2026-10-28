@@ -216,7 +216,6 @@ export const breedInstincts = {
   Dunker: ["scent", "hunting"],
   "Dutch Shepherd": ["guarding", "working"],
   "Dutch Smoushond": ["companionship"],
-
   "East European Shepherd": ["guarding", "working", "intense"],
   "East Siberian Laika": ["hunting"],
   "Ecuadorian Hairless Dog": ["companionship"],
@@ -234,11 +233,20 @@ export const breedInstincts = {
   "Estrela Mountain Dog": ["guarding"],
   Eurasier: ["companionship"],
 
+  "Faroese Sheepdog": ["herding"],
   "Field Spaniel": ["scent"],
+  "Fila Brasileiro": ["guarding", "intense"],
   "Finnish Hound": ["companionship", "scent"],
   "Finnish Lapphund": ["herding", "guarding"],
   "Finnish Spitz": ["companionship"],
+  "Flat-Coated Retriever": ["hunting", "companionship"],
+  "Florida Cracker Cur": ["herding", "hunting", "working"],
+  Foxhoodle: ["hunting", "companionship"],
   "French Bulldog": ["companionship"],
+  "French Spaniel": ["hunting", "companionship"],
+  Frenchton: ["companionship"],
+  Frug: ["companionship"],
+
   "German Pinscher": ["ratting", "guarding"],
   "German Shepherd": ["guarding", "working", "intense"],
   "German Shorthaired Pointer": ["hunting"],

@@ -2908,6 +2908,19 @@ export const breedTraits = {
     size: 2,
   },
 
+  "Faroese Sheepdog": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
   "Field Spaniel": {
     energy: 2,
     space: 2,
@@ -2919,6 +2932,19 @@ export const breedTraits = {
     },
     timeNeed: 3,
     size: 2,
+  },
+
+  "Fila Brasileiro": {
+    energy: 2,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 3,
+      other: 2,
+    },
+    timeNeed: 2,
+    size: 3,
   },
 
   "Finnish Hound": {
@@ -2960,6 +2986,45 @@ export const breedTraits = {
     size: 2,
   },
 
+  "Flat-Coated Retriever": {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 2,
+    },
+    timeNeed: 3,
+    size: 3,
+  },
+
+  "Florida Cracker Cur": {
+    energy: 3,
+    space: 3,
+    experience: 3,
+    kidFriendly: 2,
+    petFriendly: {
+      dogs: 2,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  Foxhoodle: {
+    energy: 3,
+    space: 2,
+    experience: 2,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
   "French Bulldog": {
     energy: 1,
     space: 1,
@@ -2970,6 +3035,45 @@ export const breedTraits = {
       other: 1,
     },
     timeNeed: 1,
+    size: 1,
+  },
+
+  "French Spaniel": {
+    energy: 3,
+    space: 2,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 3,
+    },
+    timeNeed: 3,
+    size: 2,
+  },
+
+  Frenchton: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
+    size: 1,
+  },
+
+  Frug: {
+    energy: 2,
+    space: 1,
+    experience: 1,
+    kidFriendly: 1,
+    petFriendly: {
+      dogs: 1,
+      other: 1,
+    },
+    timeNeed: 2,
     size: 1,
   },
 
