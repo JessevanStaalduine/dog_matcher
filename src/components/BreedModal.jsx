@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { getBreedImageData } from "../utils/breedImages";
 import "./BreedModal.css";
+import artFrame from "../assets/PNG/round-frame.webp";
 
 function BreedModal({ breed, onClose }) { 
     useEffect(() => {
@@ -73,17 +74,23 @@ function BreedModal({ breed, onClose }) {
 <div className="match-score-container">
     {breed.suggestionScore != null && (
       
-      <p
-        className={`match-score ${
-          breed.suggestionScore <= 4
-            ? "match-score--low"
-            : breed.suggestionScore < 7
-            ? "match-score--medium"
-            : "match-score--high"
-        }`}
-      >
-        <span>{breed.suggestionScore.toFixed(1)}</span>
-      </p>
+<div
+  className={`match-score ${
+    breed.suggestionScore <= 4
+      ? "match-score--low"
+      : breed.suggestionScore < 7
+      ? "match-score--medium"
+      : "match-score--high"
+  }`}
+>
+  <img
+    className="match-score__grass"
+    src={artFrame}
+    alt=""
+  />
+
+  <span>{breed.suggestionScore.toFixed(1)}</span>
+</div>
     )}</div>
 
 </div>
